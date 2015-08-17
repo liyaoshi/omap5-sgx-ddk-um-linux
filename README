@@ -26,7 +26,7 @@ provides additional enhancements and integration for Linux OMAP.
 The kernel mode drivers for SGX are available at:
 https://git.ti.com/graphics/omap5-sgx-ddk-linux
 
-The OMAP 5430 kernel drivers follow TI's kernel tree hosted at:
+The OMAP kernel drivers follow TI's kernel tree hosted at:
 http://omapzoom.org/?p=kernel/omap.git
 
 ----------
@@ -56,7 +56,7 @@ Package Contents
 targetfs/
 ---------
 
-The 'targetfs' folder contains the user mode modules of SGX DDK for OMAP5/DRA7xx.
+The 'targetfs' folder contains the user mode modules of SGX DDK for AM437x.
 
 
 *********************************************************************
