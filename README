@@ -26,7 +26,7 @@ provides additional enhancements and integration for Linux OMAP.
 The kernel mode drivers for SGX are available at:
 https://git.ti.com/graphics/omap5-sgx-ddk-linux
 
-The OMAP 5430 kernel drivers follow TI's kernel tree hosted at:
+The OMAP AM3/4 kernel drivers follow TI's kernel tree hosted at:
 http://omapzoom.org/?p=kernel/omap.git
 
 ----------
@@ -36,18 +36,13 @@ Highlights
 This is version 1.9 of the TI DDK. It is based on IMG's
 1.9 DDK post-beta engineering drop (ED2253347) delivery to TI.
 
-This release supports Wayland 1.3.0 and DRM/KMS.
-
-DDK dependencies: gcc 4.7.3, glibc 2.15, libdrm 2.4.41, libgbm 9.0.0, Wayland
-1.3.0
+DDK dependencies: gcc 4.7.3, glibc 2.15, libdrm 2.4.41 
 
 -----------
 Limitations
 -----------
-1. Supports only DRM/KMS and Wayland. No support for Null Window System
-2. Killing Wayland simple-egl example leads to a SGX HW recovery
-3. Killing Weston when OpenGL application is running leads to kernel crash
-4. Tearing artifacts observed with high render load
+1. Supports only Null Window DRM. No support for Wayland/DRM System
+2. Tearing artifacts observed with high render load
 
 ----------------
 Package Contents
@@ -56,7 +51,7 @@ Package Contents
 targetfs/
 ---------
 
-The 'targetfs' folder contains the user mode modules of SGX DDK for OMAP5/DRA7xx.
+The 'targetfs' folder contains the user mode modules of SGX DDK for AM3/AM4.
 
 
 *********************************************************************
@@ -104,16 +99,6 @@ target $ pvrsrvinit
 *                         TEST                                      *
 *********************************************************************
 
-The DDK has been verified using the kmscube test application that has 
-been included with the SDK file system. This application uses DRM/KMS
-and GBM to render a rotating cube on the screen.
+The DDK has been verified using the SGX test application that has 
+been included with the SDK file system. 
 
-Set the LD_LIBRARY_PATH to point to the user libraries and Wayland 
-libraries.
-
-target $ kmscube
-
-The DDK has been verified using Weston compositor that has been included
-with the SDK file system. This application uses Wayland.
-
-target $ weston --connector=4 --tty=1
