@@ -1,4 +1,8 @@
 file /etc/init.d/rc.pvr
+file /usr/lib/pkgconfig/egl.pc
+file /usr/lib/pkgconfig/gles_cm.pc
+file /usr/lib/pkgconfig/glesv2.pc
+file /usr/lib/pkgconfig/wayland-egl.pc
 file /usr/lib/libGLES_CM.so.1.14.3699939
 link /usr/lib/libGLES_CM.so.1
 link /usr/lib/libGLES_CM.so
@@ -69,6 +73,18 @@ file /usr/local/bin/pvrsrvctl
 file /usr/local/bin/sgx_init_test
 file /usr/local/bin/ews_server
 file /usr/local/bin/ews_server_es2
+file /usr/include/ews/ews.h
+file /usr/include/ews/ews_types.h
+file /usr/include/EGL/eglext.h
+file /usr/include/EGL/egl.h
+file /usr/include/EGL/eglplatform.h
+file /usr/include/KHR/khrplatform.h
+file /usr/include/GLES/glext.h
+file /usr/include/GLES/gl.h
+file /usr/include/GLES/glplatform.h
+file /usr/include/GLES2/gl2ext.h
+file /usr/include/GLES2/gl2.h
+file /usr/include/GLES2/gl2platform.h
 file /usr/local/bin/services_test
 file /usr/local/bin/sgx_blit_test
 file /usr/local/bin/sgx_clipblit_test
